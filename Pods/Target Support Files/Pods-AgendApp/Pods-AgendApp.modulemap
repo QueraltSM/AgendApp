@@ -1,0 +1,6 @@
+framework module Pods_AgendApp {
+  umbrella header "Pods-AgendApp-umbrella.h"
+
+  export *
+  module * { export * }
+}
