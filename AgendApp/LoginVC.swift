@@ -16,10 +16,6 @@ class LoginVC: UIViewController {
     
     @IBOutlet weak var background: UIImageView!
     
-    @IBAction func securePassword(_ sender: Any) {
-        password.isSecureTextEntry = true
-    }
-    
     
     @IBAction func login(_ sender: Any) {
         FIRAuth.auth()?.signIn(withEmail: email.text!, password: password.text!) { (user, error) in
@@ -47,7 +43,5 @@ class LoginVC: UIViewController {
         super.didReceiveMemoryWarning()
 
     }
-    
-
 
 }

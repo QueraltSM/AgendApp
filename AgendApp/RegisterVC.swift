@@ -20,7 +20,8 @@ class RegisterVC: UIViewController {
         super.viewDidLoad()
         background.addBlurEffect()
     }
-
+    
+    
     @IBAction func register(_ sender: Any) {
         FIRAuth.auth()?.createUser(withEmail: email.text!, password: password.text!, completion: {
             user, error in
@@ -41,6 +42,4 @@ class RegisterVC: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
-
 }

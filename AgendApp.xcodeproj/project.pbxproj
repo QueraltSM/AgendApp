@@ -18,6 +18,8 @@
 		627C726920618753004EF0CB /* LoginBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 627C726820618752004EF0CB /* LoginBackground.jpg */; };
 		627C726B206187FD004EF0CB /* RegisterBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 627C726A206187FC004EF0CB /* RegisterBackground.jpg */; };
 		627C726D20618828004EF0CB /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627C726C20618828004EF0CB /* RegisterVC.swift */; };
+		62C6933220655BA300379E19 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C6933120655BA300379E19 /* HomeVC.swift */; };
+		62C6933420655C9100379E19 /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C6933320655C9100379E19 /* SideMenuVC.swift */; };
 		62CBE25E20631C030098C26A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 62CBE25D20631C030098C26A /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +38,8 @@
 		627C726820618752004EF0CB /* LoginBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LoginBackground.jpg; sourceTree = "<group>"; };
 		627C726A206187FC004EF0CB /* RegisterBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = RegisterBackground.jpg; sourceTree = "<group>"; };
 		627C726C20618828004EF0CB /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		62C6933120655BA300379E19 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		62C6933320655C9100379E19 /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
 		62CBE25D20631C030098C26A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		750856B1D5AA7FDD762BFA47 /* Pods-AgendApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AgendApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-AgendApp/Pods-AgendApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -91,6 +95,8 @@
 				627C7256206179CA004EF0CB /* Assets.xcassets */,
 				627C7258206179CA004EF0CB /* LaunchScreen.storyboard */,
 				627C725B206179CA004EF0CB /* Info.plist */,
+				62C6933120655BA300379E19 /* HomeVC.swift */,
+				62C6933320655C9100379E19 /* SideMenuVC.swift */,
 			);
 			path = AgendApp;
 			sourceTree = "<group>";
@@ -250,6 +256,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				627C7252206179CA004EF0CB /* ViewController.swift in Sources */,
+				62C6933220655BA300379E19 /* HomeVC.swift in Sources */,
+				62C6933420655C9100379E19 /* SideMenuVC.swift in Sources */,
 				627C726D20618828004EF0CB /* RegisterVC.swift in Sources */,
 				627C7250206179CA004EF0CB /* AppDelegate.swift in Sources */,
 				627C72672061861E004EF0CB /* LoginVC.swift in Sources */,
