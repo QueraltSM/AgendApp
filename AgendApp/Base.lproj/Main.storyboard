@@ -307,6 +307,9 @@
                     <navigationItem key="navigationItem" title="Home" id="plj-gX-obn">
                         <barButtonItem key="leftBarButtonItem" title="&lt;" id="zXB-zQ-5zg"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="myTableView" destination="snI-Qk-uvQ" id="GbR-IA-7by"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LFJ-hk-tSb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

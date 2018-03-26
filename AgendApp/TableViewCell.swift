@@ -11,6 +11,7 @@ import Firebase
 
 class TableViewCell: UITableViewCell {
 
+    
     @IBOutlet weak var date: UILabel!
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var content: UITextField!
@@ -33,8 +34,6 @@ class TableViewCell: UITableViewCell {
     
     @IBAction func shareNote(_ sender: Any) {
     }
-    
-    
     
 
 }

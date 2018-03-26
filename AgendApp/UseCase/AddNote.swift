@@ -48,7 +48,7 @@ class AddNote: UIViewController, UITextViewDelegate {
         ]
         
 
-        ref.child(key).setValue(note)
+        ref.child("notes").child(key).setValue(note)
         
     }
     
