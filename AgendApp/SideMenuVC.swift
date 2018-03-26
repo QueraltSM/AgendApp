@@ -7,13 +7,16 @@
 //
 
 import UIKit
+import Firebase
 
 class SideMenuVC: UIViewController {
-
+var menu_vc : SideMenuVC!
+    
+    @IBOutlet weak var background: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        background.addBlurEffect()
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,15 +24,34 @@ class SideMenuVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func logout(_ sender: Any) {
+        if FIRAuth.auth()?.currentUser != nil {
+            do {
+                try FIRAuth.auth()?.signOut()
+                
+                let vc = self.storyboard?.instantiateViewController(withIdentifier: "Index") as! ViewController
+                present(vc, animated: true, completion: nil)
+                
+            } catch let error as NSError {
+                print(error.localizedDescription)
+            }
+        }
     }
-    */
+    
+    
+    @IBAction func deleteAccount(_ sender: Any) {
+        let user = FIRAuth.auth()?.currentUser
+        user?.delete (completion: { (error) in
+            if let error = error {
+                print(error.localizedDescription)
+            } else {
+                let vc = self.storyboard?.instantiateViewController(withIdentifier: "Index") as! ViewController
+                self.present(vc, animated: true, completion: nil)
+            }
+        })
+    }
+    
 
 }
+

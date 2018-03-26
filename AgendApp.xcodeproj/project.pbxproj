@@ -13,11 +13,12 @@
 		627C7255206179CA004EF0CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 627C7253206179CA004EF0CB /* Main.storyboard */; };
 		627C7257206179CA004EF0CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 627C7256206179CA004EF0CB /* Assets.xcassets */; };
 		627C725A206179CA004EF0CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 627C7258206179CA004EF0CB /* LaunchScreen.storyboard */; };
-		627C726320617A1C004EF0CB /* MainBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 627C726220617A1C004EF0CB /* MainBackground.png */; };
 		627C72672061861E004EF0CB /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627C72662061861E004EF0CB /* LoginVC.swift */; };
 		627C726920618753004EF0CB /* LoginBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 627C726820618752004EF0CB /* LoginBackground.jpg */; };
 		627C726B206187FD004EF0CB /* RegisterBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 627C726A206187FC004EF0CB /* RegisterBackground.jpg */; };
 		627C726D20618828004EF0CB /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627C726C20618828004EF0CB /* RegisterVC.swift */; };
+		62C3956320656C3300CB1759 /* HomeBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 62C3956220656C3200CB1759 /* HomeBackground.jpg */; };
+		62C3956520656FFF00CB1759 /* MainBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 62C3956420656FFF00CB1759 /* MainBackground.png */; };
 		62C6933220655BA300379E19 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C6933120655BA300379E19 /* HomeVC.swift */; };
 		62C6933420655C9100379E19 /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C6933320655C9100379E19 /* SideMenuVC.swift */; };
 		62CBE25E20631C030098C26A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 62CBE25D20631C030098C26A /* GoogleService-Info.plist */; };
@@ -33,11 +34,12 @@
 		627C7256206179CA004EF0CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		627C7259206179CA004EF0CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		627C725B206179CA004EF0CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		627C726220617A1C004EF0CB /* MainBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MainBackground.png; sourceTree = "<group>"; };
 		627C72662061861E004EF0CB /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		627C726820618752004EF0CB /* LoginBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LoginBackground.jpg; sourceTree = "<group>"; };
 		627C726A206187FC004EF0CB /* RegisterBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = RegisterBackground.jpg; sourceTree = "<group>"; };
 		627C726C20618828004EF0CB /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		62C3956220656C3200CB1759 /* HomeBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = HomeBackground.jpg; sourceTree = "<group>"; };
+		62C3956420656FFF00CB1759 /* MainBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MainBackground.png; sourceTree = "<group>"; };
 		62C6933120655BA300379E19 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		62C6933320655C9100379E19 /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
 		62CBE25D20631C030098C26A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -104,9 +106,10 @@
 		627C726120617A07004EF0CB /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				62C3956420656FFF00CB1759 /* MainBackground.png */,
+				62C3956220656C3200CB1759 /* HomeBackground.jpg */,
 				627C726A206187FC004EF0CB /* RegisterBackground.jpg */,
 				627C726820618752004EF0CB /* LoginBackground.jpg */,
-				627C726220617A1C004EF0CB /* MainBackground.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -184,9 +187,10 @@
 			files = (
 				627C725A206179CA004EF0CB /* LaunchScreen.storyboard in Resources */,
 				627C726920618753004EF0CB /* LoginBackground.jpg in Resources */,
+				62C3956520656FFF00CB1759 /* MainBackground.png in Resources */,
+				62C3956320656C3300CB1759 /* HomeBackground.jpg in Resources */,
 				627C726B206187FD004EF0CB /* RegisterBackground.jpg in Resources */,
 				627C7257206179CA004EF0CB /* Assets.xcassets in Resources */,
-				627C726320617A1C004EF0CB /* MainBackground.png in Resources */,
 				627C7255206179CA004EF0CB /* Main.storyboard in Resources */,
 				62CBE25E20631C030098C26A /* GoogleService-Info.plist in Resources */,
 			);
