@@ -145,9 +145,4 @@ struct Note {
         self.title = title
         self.content = content
     }
-    
-    func toString() -> String {
-        let s = self.date + "\n" + self.title + "\n" + self.content
-        return s
-    }
 }
