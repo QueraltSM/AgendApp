@@ -26,10 +26,17 @@ class RegisterVC: UIViewController {
         FIRAuth.auth()?.createUser(withEmail: email.text!, password: password.text!, completion: {
             user, error in
             if error != nil {
-                let alertController = UIAlertController(title: "There was an error", message: error?.localizedDescription, preferredStyle: .alert)
-                let defaultAction = UIAlertAction(title: "Ok, I will try again", style: .cancel, handler: nil)
-                alertController.addAction(defaultAction)
-                self.present(alertController, animated: true, completion: nil)
+                
+                if let errCode = FIRAuthErrorCode(rawValue: (error?._code)!) {
+                    switch errCode {
+                    case .errorCodeInvalidEmail:
+                        self.showAlert("Enter a valid email.")
+                    case .errorCodeEmailAlreadyInUse:
+                        self.showAlert("Email already in use.")
+                    default:
+                        self.showAlert("Error: \(String(describing: error?.localizedDescription))")
+                    }
+                }
             }
             else {
                 let vc = self.storyboard?.instantiateViewController(withIdentifier: "Login")
@@ -38,6 +45,15 @@ class RegisterVC: UIViewController {
         })
     }
     
+    
+    func showAlert(_ message: String) {
+        let alertController = UIAlertController(title: "There was an error", message: message, preferredStyle: UIAlertControllerStyle.alert)
+        alertController.addAction(UIAlertAction(title: "Ok, I will try again", style: UIAlertActionStyle.default,handler: nil))
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    
+        
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

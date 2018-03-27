@@ -52,7 +52,7 @@
                                         <color key="backgroundColor" red="0.74357908964157104" green="0.69325250387191772" blue="0.99758392572402954" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="25"/>
-                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" red="0.072488395225464242" green="0.072488395225464242" blue="0.072488395225464242" alpha="0.30690423696319019" colorSpace="custom" customColorSpace="sRGB"/>
@@ -156,23 +156,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MainBackground.png" translatesAutoresizingMaskIntoConstraints="NO" id="6dq-6P-rY9">
-                                <rect key="frame" x="0.0" y="60" width="208" height="607"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oaP-US-G5H">
+                                <rect key="frame" x="0.0" y="111" width="208" height="556"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PgP-7Q-FN3">
-                                <rect key="frame" x="0.0" y="549" width="208" height="74"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="51"/>
-                                <state key="normal" title="Log out">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="logout:" destination="M23-ay-8pC" eventType="touchUpInside" id="4gL-Gj-4oN"/>
-                                </connections>
-                            </button>
+                                <color key="backgroundColor" red="0.18741583824157715" green="0.63003164529800415" blue="0.92095154523849487" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JQR-HD-loX">
-                                <rect key="frame" x="0.0" y="347" width="208" height="68"/>
+                                <rect key="frame" x="0.0" y="208" width="208" height="68"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="51"/>
                                 <state key="normal" title="Delete account">
@@ -182,22 +172,21 @@
                                     <action selector="deleteAccount:" destination="M23-ay-8pC" eventType="touchUpInside" id="DwP-hn-paO"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T1y-rb-k09">
-                                <rect key="frame" x="0.0" y="169" width="208" height="43"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PgP-7Q-FN3">
+                                <rect key="frame" x="0.0" y="433" width="208" height="74"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.80614477083340852" blue="0.65729762297978112" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="51"/>
-                                <state key="normal" title="Añadir nota">
+                                <state key="normal" title="Log out">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="logout:" destination="M23-ay-8pC" eventType="touchUpInside" id="4gL-Gj-4oN"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="JFy-Jc-PjS"/>
                     </view>
-                    <connections>
-                        <outlet property="background" destination="6dq-6P-rY9" id="2p5-ae-yZm"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3vC-mK-fwg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -211,86 +200,79 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h8e-0l-hRL">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.99990254640579224" green="1" blue="0.99988251924514771" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <items>
-                                    <navigationItem title="Home" id="qO7-iN-q2Y">
-                                        <barButtonItem key="leftBarButtonItem" title="&lt;" id="2k0-BL-B6u">
-                                            <connections>
-                                                <action selector="openMenu:" destination="SpH-i5-a1r" id="Hcd-is-h2C"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="snI-Qk-uvQ">
-                                <rect key="frame" x="0.0" y="44" width="375" height="569"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="1" green="0.95560075646067311" blue="0.99112672572635241" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="268" id="lzY-a9-7eu" customClass="TableViewCell" customModule="AgendApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="268"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="488" id="lzY-a9-7eu" customClass="TableViewCellNotes" customModule="AgendApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="488"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lzY-a9-7eu" id="4c6-BL-q3R">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="267.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="487.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JS0-j1-nwW">
-                                                    <rect key="frame" x="75" y="197" width="45" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="Delete"/>
-                                                    <connections>
-                                                        <action selector="deleteNote:" destination="lzY-a9-7eu" eventType="touchUpInside" id="ctl-7q-tWz"/>
-                                                    </connections>
-                                                </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qvp-qm-VZL">
-                                                    <rect key="frame" x="163" y="197" width="48" height="30"/>
+                                                    <rect key="frame" x="163" y="373" width="48" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Modify"/>
                                                     <connections>
                                                         <action selector="modifyNote:" destination="lzY-a9-7eu" eventType="touchUpInside" id="HZS-J8-Cp2"/>
                                                     </connections>
                                                 </button>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JS0-j1-nwW">
+                                                    <rect key="frame" x="63" y="373" width="45" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Delete"/>
+                                                    <connections>
+                                                        <action selector="deleteNote:" destination="lzY-a9-7eu" eventType="touchUpInside" id="ctl-7q-tWz"/>
+                                                    </connections>
+                                                </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bca-9p-b7t">
-                                                    <rect key="frame" x="265" y="197" width="40" height="30"/>
+                                                    <rect key="frame" x="264" y="373" width="40" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Share"/>
                                                     <connections>
                                                         <action selector="shareNote:" destination="lzY-a9-7eu" eventType="touchUpInside" id="yQu-eZ-sYo"/>
                                                     </connections>
                                                 </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c6P-uT-VoQ">
-                                                    <rect key="frame" x="51" y="34" width="93" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nQy-ud-4GL">
+                                                    <rect key="frame" x="0.0" y="0.0" width="187" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5QL-HY-bcQ">
-                                                    <rect key="frame" x="229" y="34" width="42" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lhk-Ub-Ou3">
+                                                    <rect key="frame" x="186" y="0.0" width="189" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OrH-6d-Ecs">
-                                                    <rect key="frame" x="114" y="106" width="147" height="30"/>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="NSf-cC-5sv">
+                                                    <rect key="frame" x="15" y="20" width="345" height="70"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="backgroundColor" red="0.802978515625" green="1" blue="0.95119509901744614" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
                                             </subviews>
+                                            <color key="backgroundColor" red="1" green="0.80493959420329997" blue="0.66407033586892628" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="0.97254673139546066" blue="0.7775375212947061" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <outlet property="content" destination="OrH-6d-Ecs" id="7qn-8d-2xR"/>
-                                            <outlet property="date" destination="c6P-uT-VoQ" id="H7u-cK-auZ"/>
-                                            <outlet property="title" destination="5QL-HY-bcQ" id="r6P-pC-eW6"/>
+                                            <outlet property="content" destination="NSf-cC-5sv" id="d81-1f-OyW"/>
+                                            <outlet property="date" destination="nQy-ud-4GL" id="ibg-53-lrQ"/>
+                                            <outlet property="title" destination="lhk-Ub-Ou3" id="qFd-nG-M9r"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="SpH-i5-a1r" id="db5-AU-UUd"/>
+                                    <outlet property="delegate" destination="SpH-i5-a1r" id="qmr-hN-ami"/>
+                                </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UBo-RG-Ful">
                                 <rect key="frame" x="0.0" y="611" width="375" height="56"/>
@@ -304,9 +286,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="8an-Wa-ccu"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Home" id="plj-gX-obn">
-                        <barButtonItem key="leftBarButtonItem" title="&lt;" id="zXB-zQ-5zg"/>
-                    </navigationItem>
                     <connections>
                         <outlet property="myTableView" destination="snI-Qk-uvQ" id="GbR-IA-7by"/>
                     </connections>
@@ -328,7 +307,11 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Add note" id="dr1-l1-rnw">
-                                        <barButtonItem key="leftBarButtonItem" title="&lt;" id="fOt-pR-20o"/>
+                                        <barButtonItem key="leftBarButtonItem" title="&lt;" id="fOt-pR-20o">
+                                            <connections>
+                                                <segue destination="SpH-i5-a1r" kind="show" id="524-Go-Izo"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -448,4 +431,7 @@
         <image name="MainBackground.png" width="294" height="453"/>
         <image name="RegisterBackground.jpg" width="900" height="1600"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="vkf-CY-Hh8"/>
+    </inferredMetricsTieBreakers>
 </document>

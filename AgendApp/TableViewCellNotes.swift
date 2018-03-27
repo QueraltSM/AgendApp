@@ -9,17 +9,16 @@
 import UIKit
 import Firebase
 
-class TableViewCell: UITableViewCell {
-
+class TableViewCellNotes: UITableViewCell {
     
-    @IBOutlet weak var date: UILabel!
-    @IBOutlet weak var title: UILabel!
-    @IBOutlet weak var content: UITextField!
+    @IBOutlet var title: UILabel!
+    @IBOutlet var date: UILabel!
+    @IBOutlet var content: UITextView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
@@ -35,5 +34,6 @@ class TableViewCell: UITableViewCell {
     @IBAction func shareNote(_ sender: Any) {
     }
     
-
+    
 }
+
